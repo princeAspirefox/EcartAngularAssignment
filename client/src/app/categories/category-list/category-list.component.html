@@ -1,0 +1,36 @@
+﻿<div class="col-md-12">
+    <span class="page-header">Category List</span>
+    <hr/>
+    <button class="btn btn-success " style="float:right ;" routerLink="">Add New</button>
+</div>
+<div>
+    <p-table [value]="categories">
+        <ng-template pTemplate="header">
+            <tr>
+                <th>Category Id</th>
+                <th>Category Code</th>
+                <th>Category Name</th>
+                <th>Created By</th>
+                <th>Created On</th>
+                <th>Updated By</th>
+                <th>Updated On</th>
+                <th>Is Active</th>
+                <th>Is Deleted</th>
+            </tr>
+        </ng-template>
+        <ng-template pTemplate="body" let-category>
+            <tr>
+                <td>{{category.categoryId}}</td>
+                <td>{{category.categoryCode}}</td>
+                <td>{{category.categoryName}}</td>
+                <td>{{category.createdBy}}</td>
+                <td>{{category.createdOn}}</td>
+                <td>{{category.updatedBy}}</td>
+                <td>{{category.updatedon}}</td>
+                <td>{{category.isActive}}</td>
+                <td>{{category.isDeleted}}</td>
+            </tr>
+        </ng-template>
+    </p-table>
+</div>
+

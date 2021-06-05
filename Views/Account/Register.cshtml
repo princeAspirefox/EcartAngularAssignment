@@ -1,0 +1,90 @@
+﻿
+@{
+    ViewData["Title"] = "Register";
+}
+
+
+
+@using EcartAssiggmnet.ViewModels
+@model RegisterViewModel
+
+@{
+    ViewBag.Title = "User Registration";
+}
+
+<h1>User Registration</h1>
+
+<form action="#" method="post" target="_blank">
+    <div id="wrapper1" class="wrapper" style="width:auto">
+        <div class="login">
+            <div class="login-form">
+                <h1 class="login-title">Register</h1>
+                <div class="form-wrapper">
+                    <div class="input-wrapper">
+                        @Html.LabelFor(model => model.Name, htmlAttributes: new { @class = "control-label " })
+                        @Html.EditorFor(model => model.Name, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.Name, "", new { @class = "text-danger" })
+                    </div>
+                    <br>
+                    <div class="input-wrapper">
+                        @Html.LabelFor(model => model.Email, htmlAttributes: new { @class = "control-label " })
+                        @Html.EditorFor(model => model.Email, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.Email, "", new { @class = "text-danger" })
+                    </div>
+                    <br>
+                    <div class="input-wrapper">
+                        @Html.LabelFor(model => model.PhoneNumber, htmlAttributes: new { @class = "control-label " })
+                        @Html.EditorFor(model => model.PhoneNumber, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.PhoneNumber, "", new { @class = "text-danger" })
+                    </div>
+                    <br>
+                    <div class="input-wrapper">
+                        @Html.LabelFor(model => model.Address1, htmlAttributes: new { @class = "control-label " })
+                        @Html.EditorFor(model => model.Address1, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.Address1, "", new { @class = "text-danger" })
+                    </div>
+                    <br>
+                    <div class="input-wrapper">
+                        @Html.LabelFor(model => model.Address2, htmlAttributes: new { @class = "control-label " })
+                        @Html.EditorFor(model => model.Address2, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.Address2, "", new { @class = "text-danger" })
+                    </div>
+                    <br>
+
+
+
+                    <div class="input-wrapper">
+                        @Html.LabelFor(model => model.Gender, htmlAttributes: new { @class = "control-label " })<br />
+                        <div class="col-md-10">
+                            Male   @Html.RadioButtonFor(model => model.Gender, "Male")
+
+                            Female @Html.RadioButtonFor(model => model.Gender, "Female")
+                        </div>
+                        <br><br />
+                        <div class="input-wrapper">
+                            @Html.LabelFor(model => model.Password, htmlAttributes: new { @class = "control-label " })
+                            @Html.EditorFor(model => model.Password, new { htmlAttributes = new { @class = "form-control" } })
+                            @Html.ValidationMessageFor(model => model.Password, "", new { @class = "text-danger" })
+                        </div>
+                        <br>
+                        <@*div class="input-wrapper">
+                            @Html.LabelFor(model => model.ConfirmPassword, htmlAttributes: new { @class = "control-label " })
+                            @Html.EditorFor(model => model.ConfirmPassword, new { htmlAttributes = new { @class = "form-control" } })
+                            @Html.ValidationMessageFor(model => model.ConfirmPassword, "", new { @class = "text-danger" })
+                        </div>*@
+                        <br>
+
+                        <div class="actions">
+                            <button type="submit" value="Login" class="btn btn-success">Register</button>
+                            <div class="signup-action">
+                                Already a user? &nbsp @Html.ActionLink("Log In", "Login")
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+</form>
+<link href="~/css/Registration.css" rel="stylesheet" />
